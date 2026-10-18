@@ -29,7 +29,7 @@
       <li><strong>AMC</strong><span>Composer, paramétrer, compiler et imprimer le sujet.</span></li>
       <li><strong>DeepAMC Desktop</strong><span>Contrôler le projet et créer le paquet <code>.deepamc</code>.</span></li>
       <li><strong>DeepAMC Mobile</strong><span>Créer la session, identifier, scanner, corriger et vérifier.</span></li>
-      <li><strong>AMC</strong><span>Réimporter les résultats et produire les annotations finales.</span></li>
+      <li><strong>AMC · optionnel</strong><span>Réimporter les résultats uniquement si vous souhaitez poursuivre le traitement dans AMC.</span></li>
     </ol>
   </section>
 
@@ -49,7 +49,7 @@
   <section class="guide-layout">
     <aside class="guide-index" aria-label="Sommaire du guide">
       <strong>Dans ce guide</strong>
-      <a href="#composer">1. Composer dans AMC</a><a href="#compiler">2. Compiler et contrôler</a><a href="#exporter">3. Exporter le sujet</a><a href="#importer-sujet">4. Importer sur Mobile</a><a href="#session">5. Préparer la session</a><a href="#copies">6. Scanner ou importer</a><a href="#resultat">7. Contrôler le résultat</a><a href="#anomalies">8. Finaliser la correction</a><a href="#exports">9. Exporter et sauvegarder</a><a href="#retour-amc">10. Réintégrer dans AMC</a>
+      <a href="#composer">1. Composer dans AMC</a><a href="#compiler">2. Compiler et contrôler</a><a href="#exporter">3. Exporter le sujet</a><a href="#importer-sujet">4. Importer sur Mobile</a><a href="#session">5. Préparer la session</a><a href="#copies">6. Scanner ou importer</a><a href="#resultat">7. Contrôler le résultat</a><a href="#anomalies">8. Finaliser la correction</a><a href="#exports">9. Exporter et sauvegarder</a><a href="#retour-amc">10. Réintégrer dans AMC <em>Optionnel</em></a>
     </aside>
 
     <div class="guide-content">
@@ -106,7 +106,8 @@
       </div></article>
 
       <article id="retour-amc"><span>10</span><div>
-        <p class="tool-label">RETOUR DANS DEEPAMC DESKTOP ET AMC</p><h2>Réintégrer les résultats dans le projet AMC</h2>
+        <p class="tool-label">ÉTAPE OPTIONNELLE · RETOUR DANS DEEPAMC DESKTOP ET AMC</p><h2>Réintégrer les résultats dans le projet AMC <span class="optional-badge">Optionnel</span></h2>
+        <p class="optional-intro">Les exports CSV, ZIP et PDF de l’étape 9 permettent déjà d’achever la correction dans DeepAMC. Effectuez cette étape seulement si vous voulez retrouver les résultats et produire les annotations depuis Auto Multiple Choice.</p>
         <ol><li>Transférez le fichier <code>.deepamc-results</code> du téléphone vers l’ordinateur.</li><li>Dans DeepAMC Desktop, choisissez le parcours d’import des résultats.</li><li>Sélectionnez le <strong>projet AMC d’origine</strong> et le paquet <code>.deepamc-results</code>.</li><li>Vérifiez le résumé de compatibilité, les identifiants du sujet, les copies et les notes, puis confirmez l’import.</li><li>DeepAMC Desktop crée une sauvegarde horodatée dans <code>deepamc-backups/</code> avant toute écriture transactionnelle.</li><li>Rouvrez AMC, actualisez la saisie et la notation si nécessaire, puis contrôlez la moyenne et plusieurs notes individuelles.</li><li>Lancez <strong>Annoter les copies</strong> dans AMC. Les réponses doivent apparaître sur les scans originaux importés, avec les identités et les notes.</li></ol>
         <div class="completion-check"><strong>Workflow terminé si</strong><span>les notes de DeepAMC et d’AMC concordent, les copies sont associées aux bons étudiants et les PDF annotés sont exploitables.</span></div>
       </div></article>

@@ -144,6 +144,7 @@ nav a:hover, nav a.active { color: var(--blue); }
 .guide-index strong { margin-bottom: 6px; }
 .guide-index a { color: var(--muted); font-size: .9rem; font-weight: 700; text-decoration: none; }
 .guide-index a:hover { color: var(--blue); }
+.guide-index a em { margin-left: 4px; padding: 2px 6px; border-radius: 10px; background: var(--soft-green); color: var(--green); font-size: .62rem; font-style: normal; text-transform: uppercase; }
 .guide-content { display: grid; gap: 16px; }
 .guide-content article { padding: 26px; display: grid; grid-template-columns: 48px 1fr; gap: 18px; border: 1px solid var(--line); border-radius: 18px; background: #fff; }
 .guide-content article > span { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 12px; background: var(--soft-blue); color: var(--blue); font-size: .75rem; font-weight: 900; }
@@ -154,6 +155,8 @@ nav a:hover, nav a.active { color: var(--blue); }
 .guide-content li { margin: 7px 0; padding-left: 3px; }
 .guide-content .tool-label { margin-bottom: 5px; color: var(--blue); font-size: .7rem; font-weight: 850; letter-spacing: .1em; }
 .guide-content .guide-note { margin-top: 17px; padding: 13px 15px; border-left: 3px solid var(--blue); border-radius: 0 9px 9px 0; background: var(--soft-blue); color: #334b70; }
+.guide-content .optional-intro { margin: 10px 0 15px; padding: 13px 15px; border-radius: 10px; background: var(--soft-green); color: #315b4b; }
+.optional-badge { display: inline-block; margin-left: 7px; padding: 4px 8px; vertical-align: middle; border-radius: 20px; background: var(--soft-green); color: var(--green); font-size: .63rem; font-weight: 900; letter-spacing: .05em; text-transform: uppercase; }
 .completion-check { margin-top: 17px; padding: 14px 16px; display: grid; gap: 3px; border-radius: 10px; background: var(--soft-green); color: #315b4b; }
 .completion-check strong { color: var(--green); font-size: .76rem; text-transform: uppercase; letter-spacing: .06em; }
 .workflow-overview { margin-bottom: 24px; padding: 30px; display: grid; grid-template-columns: minmax(190px, .65fr) 1.35fr; gap: 28px; border-radius: 20px; background: var(--navy); color: #fff; }
