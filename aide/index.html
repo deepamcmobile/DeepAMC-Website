@@ -1,6 +1,137 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Guide de prise en main de DeepAMC."><title>Aide — DeepAMC</title><link rel="icon" href="/assets/deepamc-mark.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/site.css"></head><body><a class="skip-link" href="#contenu">Aller au contenu</a>
-<header class="site-header"><a class="brand" href="/"><img src="/assets/deepamc-mark.svg" alt="" width="44" height="44"><span><strong>DeepAMC</strong><small>AMC sur Mobile</small></span></a><button class="menu-button" type="button" aria-expanded="false" aria-controls="main-navigation">Menu</button><nav id="main-navigation"><a href="/">Présentation</a><a href="/tarifs/">Tarifs</a><a class="active" href="/aide/">Aide</a><a href="/support/">Support</a><a class="nav-download" href="/telechargements/">Télécharger</a></nav></header>
-<main id="contenu" class="page-main"><section class="page-heading"><p class="eyebrow">PRISE EN MAIN</p><h1>Du projet AMC au résultat</h1><p>Le parcours essentiel pour préparer un sujet, corriger une série et restituer les résultats.</p></section>
-<section class="guide-layout"><aside class="guide-index"><strong>Dans ce guide</strong><a href="#preparer">1. Préparer</a><a href="#transferer">2. Transférer</a><a href="#corriger">3. Corriger</a><a href="#verifier">4. Vérifier</a><a href="#restituer">5. Restituer</a></aside><div class="guide-content"><article id="preparer"><span>01</span><div><h2>Préparer le projet AMC</h2><p>Ouvrez DeepAMC Desktop, sélectionnez le projet Auto Multiple Choice et lancez la vérification de compatibilité.</p></div></article><article id="transferer"><span>02</span><div><h2>Créer et transférer le paquet</h2><p>Générez le fichier <code>.deepamc</code>, puis transférez-le vers le téléphone et importez-le comme sujet.</p></div></article><article id="corriger"><span>03</span><div><h2>Créer une session et corriger</h2><p>Choisissez le sujet, créez une session, importez si besoin la liste des étudiants, puis scannez ou importez les copies.</p></div></article><article id="verifier"><span>04</span><div><h2>Contrôler les anomalies</h2><p>Examinez le diagnostic, le Zoom AMC et la file « À vérifier ». Validez les ambiguïtés avant la clôture de la série.</p></div></article><article id="restituer"><span>05</span><div><h2>Exporter vers AMC</h2><p>Exportez les résultats depuis Mobile, ouvrez-les dans DeepAMC Desktop et réintégrez-les au projet AMC d’origine.</p></div></article></div></section>
-<section class="faq"><div class="section-heading"><p class="eyebrow">QUESTIONS FRÉQUENTES</p><h2>Avant de commencer</h2></div><details><summary>DeepAMC fonctionne-t-il sans Internet ?</summary><p>La correction académique reste locale et peut fonctionner hors connexion. Une connexion périodique est nécessaire pour le compte et la licence.</p></details><details><summary>Les copies sont-elles envoyées au backend ?</summary><p>Non. Le backend commercial ne reçoit ni copies, ni sujets, ni réponses, ni notes, ni listes d’étudiants.</p></details><details><summary>Quelle différence entre un sujet et une session ?</summary><p>Le sujet contient la structure de l’examen et son barème. La session regroupe les copies corrigées pour une occurrence donnée de cet examen.</p></details></section></main>
-<footer><a class="brand footer-brand" href="/"><img src="/assets/deepamc-mark.svg" alt="" width="38" height="38"><span><strong>DeepAMC</strong><small>AMC sur Mobile</small></span></a><p>Documentation de prise en main.</p><div class="footer-links"><a href="/mentions-legales/">Mentions légales</a><a href="/support/">Besoin d’aide ?</a><a href="/telechargements/">Téléchargements</a></div></footer><script src="/assets/site.js"></script></body></html>
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Guide complet de prise en main de DeepAMC, de la préparation du sujet dans Auto Multiple Choice à la restitution des résultats.">
+  <title>Prise en main complète — DeepAMC</title>
+  <link rel="icon" href="/assets/deepamc-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <a class="brand" href="/"><img src="/assets/deepamc-mark.svg" alt="" width="44" height="44"><span><strong>DeepAMC</strong><small>AMC sur Mobile</small></span></a>
+  <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-navigation">Menu</button>
+  <nav id="main-navigation"><a href="/">Présentation</a><a href="/tarifs/">Tarifs</a><a class="active" href="/aide/">Aide</a><a href="/support/">Support</a><a class="nav-download" href="/telechargements/">Télécharger</a></nav>
+</header>
+
+<main id="contenu" class="page-main">
+  <section class="page-heading">
+    <p class="eyebrow">PRISE EN MAIN COMPLÈTE</p>
+    <h1>Du sujet AMC aux copies annotées</h1>
+    <p>Suivez le workflow complet : préparer et compiler le sujet dans Auto Multiple Choice, l’envoyer sur le téléphone, corriger les copies, contrôler les résultats, puis les réintégrer au projet AMC d’origine.</p>
+  </section>
+
+  <section class="workflow-overview" aria-labelledby="workflow-title">
+    <div><p class="eyebrow">VUE D’ENSEMBLE</p><h2 id="workflow-title">Trois outils, un seul parcours</h2></div>
+    <ol>
+      <li><strong>AMC</strong><span>Composer, paramétrer, compiler et imprimer le sujet.</span></li>
+      <li><strong>DeepAMC Desktop</strong><span>Contrôler le projet et créer le paquet <code>.deepamc</code>.</span></li>
+      <li><strong>DeepAMC Mobile</strong><span>Créer la session, identifier, scanner, corriger et vérifier.</span></li>
+      <li><strong>AMC</strong><span>Réimporter les résultats et produire les annotations finales.</span></li>
+    </ol>
+  </section>
+
+  <section class="prerequisite-card" aria-labelledby="prerequisite-title">
+    <div class="prerequisite-icon" aria-hidden="true">✓</div>
+    <div>
+      <h2 id="prerequisite-title">Avant de commencer</h2>
+      <ul>
+        <li>Installez <strong>Auto Multiple Choice</strong>, <strong>DeepAMC Desktop</strong> et <strong>DeepAMC Mobile</strong>.</li>
+        <li>Connectez Mobile et Desktop au même compte DeepAMC et vérifiez que la licence autorise les opérations voulues.</li>
+        <li>Conservez le dossier original du projet AMC : il sera nécessaire lors du réimport des résultats.</li>
+        <li>Préparez, si possible, un fichier CSV des étudiants comportant l’identifiant <strong>INE AMC</strong>.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="guide-layout">
+    <aside class="guide-index" aria-label="Sommaire du guide">
+      <strong>Dans ce guide</strong>
+      <a href="#composer">1. Composer dans AMC</a><a href="#compiler">2. Compiler et contrôler</a><a href="#exporter">3. Exporter le sujet</a><a href="#importer-sujet">4. Importer sur Mobile</a><a href="#session">5. Préparer la session</a><a href="#copies">6. Scanner ou importer</a><a href="#resultat">7. Contrôler le résultat</a><a href="#anomalies">8. Finaliser la correction</a><a href="#exports">9. Exporter et sauvegarder</a><a href="#retour-amc">10. Réintégrer dans AMC</a>
+    </aside>
+
+    <div class="guide-content">
+      <article id="composer"><span>01</span><div>
+        <p class="tool-label">DANS AUTO MULTIPLE CHOICE</p><h2>Créer et paramétrer le sujet</h2>
+        <ol><li>Créez un projet AMC ou ouvrez un projet existant.</li><li>Rédigez les questions et déclarez précisément les bonnes réponses.</li><li>Configurez le barème de chaque question : réponse simple ou multiple, points partiels et pénalités éventuelles.</li><li>Prévoyez la zone d’identification utilisée par votre établissement, notamment la grille <strong>INE AMC</strong> si l’association automatique des étudiants est souhaitée.</li><li>Vérifiez que chaque question possède des cases lisibles et que les numéros de questions correspondent au sujet attendu.</li></ol>
+        <p class="guide-note"><strong>Important :</strong> DeepAMC applique les bonnes réponses, l’ordre des choix et les barèmes enregistrés dans ce projet AMC. Toute erreur présente ici sera reproduite lors de la correction.</p>
+      </div></article>
+
+      <article id="compiler"><span>02</span><div>
+        <p class="tool-label">DANS AUTO MULTIPLE CHOICE</p><h2>Compiler, préparer les exemplaires et imprimer</h2>
+        <ol><li>Dans l’onglet <strong>Préparation</strong>, mettez à jour les documents et compilez le sujet sans erreur.</li><li>Générez le nombre d’exemplaires nécessaire. AMC peut permuter les questions ou les choix : DeepAMC conservera la correspondance avec chaque exemplaire.</li><li>Contrôlez visuellement le sujet et la feuille de réponses : quatre repères visibles, grille d’identité complète, cases non coupées et pagination correcte.</li><li>Imprimez les exemplaires depuis les documents générés par AMC, sans redimensionnement ni recadrage par le pilote d’impression.</li></ol>
+        <div class="completion-check"><strong>Étape terminée si</strong><span>AMC a généré le sujet, les exemplaires, les mises en page et les données de correction dans le même dossier de projet.</span></div>
+      </div></article>
+
+      <article id="exporter"><span>03</span><div>
+        <p class="tool-label">DANS DEEPAMC DESKTOP</p><h2>Vérifier la compatibilité et créer le paquet</h2>
+        <ol><li>Ouvrez <strong>DeepAMC Desktop</strong>, puis choisissez <strong>Exporter un sujet AMC</strong>.</li><li>Sélectionnez le <strong>dossier du projet AMC</strong>, et non un PDF isolé.</li><li>Lancez <strong>Vérifier la compatibilité</strong>. Contrôlez la version AMC, les documents, les exemplaires, les pages, les cases, les signatures et la grille INE AMC.</li><li>Corrigez dans AMC toute anomalie bloquante, recompilez, puis relancez la vérification.</li><li>Choisissez la destination et cliquez sur <strong>Générer le fichier .deepamc</strong>.</li></ol>
+        <p class="guide-note"><strong>À conserver :</strong> le fichier <code>.deepamc</code> transporte la structure du sujet. Le dossier AMC source doit néanmoins rester intact pour le retour final des résultats.</p>
+      </div></article>
+
+      <article id="importer-sujet"><span>04</span><div>
+        <p class="tool-label">DANS DEEPAMC MOBILE</p><h2>Transférer et importer le sujet</h2>
+        <ol><li>Transférez le fichier <code>.deepamc</code> sur le téléphone par câble, partage privé ou stockage maîtrisé.</li><li>Dans DeepAMC, ouvrez <strong>Importer un sujet</strong> et sélectionnez le fichier.</li><li>Contrôlez le titre, le nombre d’exemplaires, de pages et de questions affichés.</li><li>Validez l’import. Le sujet rejoint la bibliothèque et peut servir à plusieurs sessions distinctes.</li></ol>
+        <p class="guide-note"><strong>Sujet ≠ session :</strong> le sujet contient la structure et le barème de l’examen. Une session contient les étudiants, les copies, les décisions et les exports d’une correction donnée.</p>
+      </div></article>
+
+      <article id="session"><span>05</span><div>
+        <p class="tool-label">DANS DEEPAMC MOBILE</p><h2>Créer et préparer la session de correction</h2>
+        <ol><li>Depuis l’accueil, choisissez <strong>Nouvelle session</strong>, sélectionnez le sujet et donnez un nom explicite à la session.</li><li>Importez la liste CSV des étudiants si elle est disponible. L’association s’effectue à partir de la colonne <strong>INE AMC</strong>.</li><li>Vous pouvez commencer sans liste : après un import tardif, utilisez <strong>Réassocier et actualiser les copies</strong> pour ajouter les identités et régénérer proprement les annotations.</li><li>Vérifiez que le sujet et la session actifs correspondent bien à l’épreuve en cours avant la première copie.</li></ol>
+        <div class="completion-check"><strong>Étape terminée si</strong><span>la bonne session est active et la liste des étudiants est importée, ou son ajout ultérieur est planifié.</span></div>
+      </div></article>
+
+      <article id="copies"><span>06</span><div>
+        <p class="tool-label">CAPTURE DIRECTE OU DOCUMENTS NUMÉRISÉS</p><h2>Scanner ou importer les copies</h2>
+        <h3>Avec la caméra</h3><ol><li>Posez la feuille à plat sur un fond contrasté, avec un éclairage uniforme.</li><li>Cadrez toute la page et rendez visibles les quatre repères AMC.</li><li>Attendez l’état <strong>Prêt à capturer</strong>, puis laissez la capture automatique agir ou déclenchez-la manuellement.</li><li>Si le diagnostic recommande de reprendre le scan, améliorez la netteté, la lumière ou le cadrage avant de continuer.</li></ol>
+        <h3>Avec des fichiers déjà numérisés</h3><ol><li>Ouvrez l’écran d’import et choisissez des images, un fichier PDF ou TIFF pris en charge.</li><li>Suivez la progression en arrière-plan et consultez le bilan d’import persistant.</li><li>Prévisualisez les pages au besoin et corrigez manuellement l’orientation d’une copie renversée ou en paysage.</li></ol>
+      </div></article>
+
+      <article id="resultat"><span>07</span><div>
+        <p class="tool-label">APRÈS CHAQUE COPIE</p><h2>Contrôler le résultat du scan</h2>
+        <ol><li>Vérifiez l’exemplaire AMC reconnu, l’INE AMC, le nom de l’étudiant et la note.</li><li>Consultez la copie annotée : bleu pour les réponses correctes, rouge pour les erreurs ou réponses attendues absentes, orange pour les ambiguïtés.</li><li>Ouvrez l’onglet <strong>Zoom AMC</strong> et parcourez les questions avec <strong>Précédente</strong> et <strong>Suivante</strong> pour comparer les extraits réels des cases.</li><li>Consultez <strong>Diagnostic</strong> pour comprendre les avertissements d’identité, d’orientation, de qualité ou de lecture.</li><li>Enregistrez la copie une seule fois lorsque les informations sont cohérentes.</li></ol>
+      </div></article>
+
+      <article id="anomalies"><span>08</span><div>
+        <p class="tool-label">AVANT DE CLÔTURER LA SÉRIE</p><h2>Résoudre les anomalies et recorriger</h2>
+        <ol><li>Ouvrez <strong>À vérifier</strong> et traitez en priorité les anomalies critiques : identité inconnue, exemplaire incertain, cases ambiguës ou page incomplète.</li><li>Dans <strong>Copies enregistrées</strong>, ouvrez une copie pour examiner son détail.</li><li>Utilisez <strong>Modifier la copie</strong> pour corriger manuellement les réponses question par question ; la note et l’annotation sont recalculées.</li><li>Contrôlez un échantillon de copies sans anomalie afin de détecter une éventuelle erreur systématique de sujet, d’exemplaire ou de barème.</li><li>Consultez le journal d’audit si vous devez retracer une modification manuelle.</li></ol>
+        <p class="guide-note"><strong>Bonne pratique :</strong> ne clôturez pas la correction tant qu’une anomalie critique reste inexpliquée.</p>
+      </div></article>
+
+      <article id="exports"><span>09</span><div>
+        <p class="tool-label">DANS LA SESSION MOBILE</p><h2>Exporter les résultats et sauvegarder la session</h2>
+        <ol><li>Générez le <strong>CSV</strong> pour la liste des notes et le suivi administratif.</li><li>Exportez le <strong>ZIP</strong> ou le <strong>PDF</strong> pour remettre ou archiver les copies annotées.</li><li>Générez le paquet <strong>.deepamc-results</strong> pour retourner dans AMC les identités, décisions de cases, scores, notes et scans originaux redressés.</li><li>Créez une <strong>sauvegarde chiffrée</strong> de la session et conservez son mot de passe séparément.</li><li>Vérifiez que les fichiers exportés s’ouvrent correctement avant toute suppression des données du téléphone.</li></ol>
+      </div></article>
+
+      <article id="retour-amc"><span>10</span><div>
+        <p class="tool-label">RETOUR DANS DEEPAMC DESKTOP ET AMC</p><h2>Réintégrer les résultats dans le projet AMC</h2>
+        <ol><li>Transférez le fichier <code>.deepamc-results</code> du téléphone vers l’ordinateur.</li><li>Dans DeepAMC Desktop, choisissez le parcours d’import des résultats.</li><li>Sélectionnez le <strong>projet AMC d’origine</strong> et le paquet <code>.deepamc-results</code>.</li><li>Vérifiez le résumé de compatibilité, les identifiants du sujet, les copies et les notes, puis confirmez l’import.</li><li>DeepAMC Desktop crée une sauvegarde horodatée dans <code>deepamc-backups/</code> avant toute écriture transactionnelle.</li><li>Rouvrez AMC, actualisez la saisie et la notation si nécessaire, puis contrôlez la moyenne et plusieurs notes individuelles.</li><li>Lancez <strong>Annoter les copies</strong> dans AMC. Les réponses doivent apparaître sur les scans originaux importés, avec les identités et les notes.</li></ol>
+        <div class="completion-check"><strong>Workflow terminé si</strong><span>les notes de DeepAMC et d’AMC concordent, les copies sont associées aux bons étudiants et les PDF annotés sont exploitables.</span></div>
+      </div></article>
+    </div>
+  </section>
+
+  <section class="final-checklist" aria-labelledby="final-checklist-title">
+    <div class="section-heading"><p class="eyebrow">CONTRÔLE FINAL</p><h2 id="final-checklist-title">Avant de publier les notes</h2></div>
+    <ul><li>Toutes les copies attendues sont présentes.</li><li>Les INE AMC sont associés aux bons étudiants.</li><li>Aucune anomalie critique ne reste ouverte.</li><li>Les modifications manuelles sont justifiées dans le journal d’audit.</li><li>La moyenne et un échantillon de notes concordent entre DeepAMC et AMC.</li><li>Une sauvegarde chiffrée et les exports finaux sont conservés selon votre politique de données.</li></ul>
+  </section>
+
+  <section class="faq">
+    <div class="section-heading"><p class="eyebrow">QUESTIONS FRÉQUENTES</p><h2>Comprendre le parcours</h2></div>
+    <details><summary>Pourquoi faut-il conserver le projet AMC d’origine ?</summary><p>Le paquet <code>.deepamc-results</code> est contrôlé puis réintégré dans le projet qui a servi à générer le sujet. Un autre projet, même visuellement identique, peut avoir des identifiants ou des géométries différents.</p></details>
+    <details><summary>Faut-il importer la liste des étudiants avant de scanner ?</summary><p>C’est recommandé, mais pas obligatoire. Si la liste est ajoutée après les scans, lancez « Réassocier et actualiser les copies » pour récupérer les noms et prénoms et régénérer les annotations à partir des scans originaux.</p></details>
+    <details><summary>DeepAMC fonctionne-t-il sans Internet ?</summary><p>La correction académique reste locale et peut fonctionner hors connexion tant que le droit hors ligne est valide. Une connexion périodique est nécessaire pour le compte et la licence.</p></details>
+    <details><summary>Les copies sont-elles envoyées au backend ?</summary><p>Non. Le backend commercial ne reçoit ni copies, ni sujets, ni réponses, ni notes, ni listes d’étudiants.</p></details>
+    <details><summary>Quelle différence entre un sujet, une session et un exemplaire ?</summary><p>Le sujet contient la structure et le barème. La session regroupe les copies d’une campagne de correction. Un exemplaire est une variante du sujet dont AMC peut avoir permuté les questions ou les choix.</p></details>
+    <details><summary>Que faire si une copie est rejetée ou mal orientée ?</summary><p>Consultez le diagnostic et la prévisualisation. Reprenez le scan si la page est floue ou incomplète ; pour un document importé, utilisez les commandes d’orientation puis relancez son contrôle.</p></details>
+  </section>
+
+  <section class="notice-card help-support"><div><strong>Un problème persiste ?</strong><p>Notez l’étape, le message affiché et l’identifiant du diagnostic avant de contacter l’assistance.</p></div><a class="button primary" href="/support/">Contacter le support</a></section>
+</main>
+
+<footer><a class="brand footer-brand" href="/"><img src="/assets/deepamc-mark.svg" alt="" width="38" height="38"><span><strong>DeepAMC</strong><small>AMC sur Mobile</small></span></a><p>Documentation de prise en main.</p><div class="footer-links"><a href="/mentions-legales/">Mentions légales</a><a href="/support/">Besoin d’aide ?</a><a href="/telechargements/">Téléchargements</a></div></footer>
+<script src="/assets/site.js"></script>
+</body>
+</html>
