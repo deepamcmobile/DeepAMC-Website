@@ -113,6 +113,7 @@ nav a:hover, nav a.active { color: var(--blue); }
 .release-card dl div { display: flex; justify-content: space-between; padding: 10px 0; border-top: 1px solid var(--line); font-size: .86rem; }
 .release-card dt { color: var(--muted); }
 .release-card dd { margin: 0; font-weight: 800; }
+.release-actions { display: grid; gap: 10px; }
 .full-width { width: 100%; }
 .button.disabled { background: #e7ebf1; color: #8a95a7; cursor: not-allowed; }
 .release-note { margin-bottom: 0; font-size: .78rem !important; }
