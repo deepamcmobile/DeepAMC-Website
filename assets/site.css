@@ -185,17 +185,40 @@ nav a:hover, nav a.active { color: var(--blue); }
 .install-panel code { padding: 2px 5px; border-radius: 4px; background: #263e60; color: #fff; }
 
 .pricing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; align-items: stretch; }
-.price-card { display: flex; flex-direction: column; }
+.pricing-reassurance { margin-top: 28px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.pricing-reassurance span { padding: 8px 12px; border: 1px solid #c9d9ef; border-radius: 999px; background: #fff; color: var(--blue); font-size: .78rem; font-weight: 800; }
+.price-card { position: relative; display: flex; flex-direction: column; }
 .price-card.featured { border: 2px solid var(--blue); box-shadow: 0 20px 55px rgba(11, 87, 208, .16); }
-.price-card h2 { min-height: 60px; margin: 22px 0 4px; font-size: 1.4rem; line-height: 1.2; }
-.price { display: block; font-size: 2rem; line-height: 1.1; letter-spacing: -.04em; }
+.popular-label { position: absolute; top: -13px; right: 18px; padding: 6px 10px; border-radius: 999px; background: var(--blue); color: #fff; font-size: .62rem; font-weight: 900; letter-spacing: .06em; }
+.price-card h2 { min-height: 60px; margin: 22px 0 6px; font-size: 1.4rem; line-height: 1.2; }
+.plan-purpose { min-height: 58px; margin: 0 0 18px; color: var(--muted); font-size: .84rem; line-height: 1.5; }
+.price { display: block; margin-top: 4px; font-size: 2rem; line-height: 1.1; letter-spacing: -.04em; }
 .price small { font-size: .82rem; letter-spacing: 0; }
-.price-card > p { color: var(--muted); }
-.price-card ul { margin: auto 0 0; padding: 22px 0 0; border-top: 1px solid var(--line); list-style: none; }
+.price-card .plan-term { margin: 7px 0 0; color: var(--muted); }
+.saving { align-self: flex-start; margin-top: 10px; padding: 5px 8px; border-radius: 7px; background: var(--soft-green); color: var(--green); font-size: .7rem; font-weight: 850; }
+.price-card ul { margin: 22px 0 0; padding: 22px 0 0; border-top: 1px solid var(--line); list-style: none; }
 .price-card li { margin: 8px 0; }
 .price-card li::before { content: "✓"; margin-right: 8px; color: var(--green); font-weight: 900; }
+.plan-action { margin-top: auto; justify-content: center; text-align: center; }
+.pricing-comparison { margin-top: 92px; }
+.comparison-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 20px; background: #fff; box-shadow: 0 15px 40px rgba(16, 33, 61, .05); }
+.comparison-scroll table { width: 100%; min-width: 760px; border-collapse: collapse; }
+.comparison-scroll th, .comparison-scroll td { padding: 17px 18px; border-bottom: 1px solid var(--line); text-align: center; }
+.comparison-scroll thead th { background: #f4f7fb; color: var(--navy); font-size: .8rem; }
+.comparison-scroll th:first-child { text-align: left; }
+.comparison-scroll tbody tr:last-child th, .comparison-scroll tbody tr:last-child td { border-bottom: 0; }
+.comparison-scroll tbody th { max-width: 270px; font-size: .83rem; }
+.comparison-scroll td { color: var(--muted); font-size: .84rem; }
+.table-check { width: 25px; height: 25px; margin: auto; display: grid; place-items: center; border-radius: 50%; background: var(--soft-green); color: var(--green); font-weight: 900; }
 .notice-card { margin-top: 28px; padding: 28px 30px; display: flex; align-items: center; justify-content: space-between; gap: 25px; border: 1px solid #bed1ef; border-radius: 18px; background: var(--soft-blue); }
 .notice-card p { margin: 4px 0 0; color: var(--muted); }
+.pricing-comparison + .notice-card { margin-top: 24px; }
+.pricing-faq { max-width: 900px; margin-left: auto; margin-right: auto; }
+.pricing-final-cta { margin-top: 80px; padding: 42px; display: flex; align-items: center; justify-content: space-between; gap: 32px; border-radius: 24px; background: var(--navy); color: #fff; }
+.pricing-final-cta h2 { margin: 6px 0 10px; font-size: clamp(1.8rem, 4vw, 2.8rem); line-height: 1.08; }
+.pricing-final-cta p { margin-bottom: 0; color: #c9d4e5; }
+.pricing-final-cta .eyebrow { color: #91baff; }
+.pricing-final-cta .button { flex: 0 0 auto; }
 
 .guide-layout { display: grid; grid-template-columns: 220px 1fr; gap: 34px; align-items: start; }
 .guide-index { position: sticky; top: 20px; padding: 22px; display: grid; gap: 10px; border: 1px solid var(--line); border-radius: 16px; background: #fff; }
@@ -313,7 +336,10 @@ footer p { margin-right: auto; }
   .page-heading h1 { font-size: 3rem; }
   .pricing-grid { grid-template-columns: 1fr; }
   .price-card h2 { min-height: auto; }
+  .plan-purpose { min-height: auto; }
   .notice-card { align-items: flex-start; flex-direction: column; }
+  .pricing-comparison { margin-top: 70px; }
+  .pricing-final-cta { padding: 30px 24px; align-items: flex-start; flex-direction: column; }
   .guide-layout { grid-template-columns: 1fr; }
   .guide-index { position: static; }
   .guide-content article { padding: 21px 18px; grid-template-columns: 38px 1fr; gap: 12px; }
