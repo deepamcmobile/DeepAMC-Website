@@ -11,5 +11,6 @@ académique.
 - Site public : `https://deepamc.app`
 
 Les applications distribuables sont publiées dans les Releases de ce dépôt.
-L’APK Android ne doit être ajouté qu’après signature Release et validation du
-pilote fermé.
+Le paquet Desktop est proposé directement sur la page de téléchargement. L’APK
+Android signé est distribué par SOFTNEUR dans le cadre de la diffusion contrôlée
+de DeepAMC Mobile.

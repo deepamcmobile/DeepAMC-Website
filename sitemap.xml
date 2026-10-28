@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://deepamc.app/</loc></url>
-  <url><loc>https://deepamc.app/telechargements/</loc></url>
-  <url><loc>https://deepamc.app/tarifs/</loc></url>
-  <url><loc>https://deepamc.app/aide/</loc></url>
-  <url><loc>https://deepamc.app/support/</loc></url>
-  <url><loc>https://deepamc.app/confidentialite/</loc></url>
-  <url><loc>https://deepamc.app/cgu/</loc></url>
-  <url><loc>https://deepamc.app/mentions-legales/</loc></url>
+  <url><loc>https://deepamc.app/</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://deepamc.app/telechargements/</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://deepamc.app/tarifs/</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://deepamc.app/aide/</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://deepamc.app/support/</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://deepamc.app/confidentialite/</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://deepamc.app/cgu/</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://deepamc.app/mentions-legales/</loc><lastmod>2026-10-28</lastmod></url>
 </urlset>
