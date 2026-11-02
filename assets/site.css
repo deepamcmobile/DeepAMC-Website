@@ -199,6 +199,10 @@ nav a:hover, nav a.active { color: var(--blue); }
 .archive-list li { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 13px 0; border-top: 1px solid var(--line); }
 .archive-list a { color: var(--blue); font-weight: 800; text-decoration: none; }
 .archive-warning { margin-bottom: 28px; padding: 18px 20px; border: 1px solid #f1cf8a; border-radius: 14px; background: var(--soft-amber); color: #633d08; }
+.archive-empty { min-height: 330px; padding: 52px 28px; display: flex; align-items: center; justify-content: center; flex-direction: column; text-align: center; border: 1px dashed #b8c7da; border-radius: 22px; background: #fff; }
+.archive-empty-icon { width: 58px; height: 58px; display: grid; place-items: center; margin-bottom: 18px; border-radius: 18px; background: var(--soft-blue); color: var(--blue); font-size: 1.8rem; }
+.archive-empty h2 { margin: 0 0 8px; }
+.archive-empty p { max-width: 560px; margin: 0 0 24px; color: var(--muted); }
 
 .pricing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; align-items: stretch; }
 .pricing-reassurance { margin-top: 28px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
