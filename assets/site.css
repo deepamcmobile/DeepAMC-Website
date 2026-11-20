@@ -166,6 +166,7 @@ nav a:hover, nav a.active { color: var(--blue); }
 .page-heading h1 { margin: 0 0 20px; font-size: clamp(2.7rem, 6vw, 4.7rem); line-height: 1; letter-spacing: -.055em; }
 .page-heading > p:last-child { color: var(--muted); font-size: 1.08rem; }
 .release-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+.desktop-releases { display: grid; gap: 22px; align-content: start; min-width: 0; }
 .release-card, .price-card, .support-grid article { padding: 30px; border: 1px solid var(--line); border-radius: 20px; background: #fff; box-shadow: 0 15px 40px rgba(16, 33, 61, .06); }
 .release-card.unavailable { background: #f8fafc; }
 .release-top { display: flex; justify-content: space-between; align-items: center; }

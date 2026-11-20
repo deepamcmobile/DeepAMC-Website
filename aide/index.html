@@ -21,15 +21,29 @@
   <section class="page-heading">
     <p class="eyebrow">PRISE EN MAIN COMPLÈTE</p>
     <h1>Du sujet AMC aux copies annotées</h1>
-    <p>Suivez le workflow complet : préparer et compiler le sujet dans Auto Multiple Choice, l’envoyer sur le téléphone, corriger les copies, contrôler les résultats, puis les réintégrer au projet AMC d’origine.</p>
+    <p>Préparez le sujet dans l’éditeur DeepAMC Desktop 0.2.0 ou directement dans Auto Multiple Choice (AMC). Compilez-le dans AMC, puis utilisez DeepAMC Mobile pour corriger les copies.</p>
   </section>
 
   <section class="notice-card" aria-labelledby="manual-title">
     <div>
       <strong id="manual-title">Manuel utilisateur complet</strong>
-      <p>Consultez ou téléchargez le manuel illustrant tout le parcours : installation, compte et licence, préparation AMC, scan, import en arrière-plan, vérification, exports, sauvegardes et dépannage.</p>
+      <p>Le manuel PDF décrit le parcours historique. Retrouvez les nouveautés de Desktop 0.2.0 dans la section ci-dessous.</p>
     </div>
     <a class="button primary" href="/aide/Manuel_utilisateur_DeepAMC_1.0_marques.pdf" download>Télécharger le manuel PDF</a>
+  </section>
+
+  <section class="install-panel" id="desktop-020" aria-labelledby="desktop-020-title">
+    <div><span class="step-number" aria-hidden="true">i</span><h2 id="desktop-020-title">Premiers pas avec DeepAMC Desktop 0.2.0</h2></div>
+    <ol>
+      <li><strong>Installer sous Windows.</strong> Téléchargez le fichier .exe pour Windows 11 ou Windows 10 64 bits à partir du build 19044. Activez la virtualisation et gardez Internet disponible. L’installateur configure WSL et Ubuntu 22.04, puis installe AMC 1.7 et Desktop. Si Windows demande un redémarrage, la configuration reprend à la prochaine ouverture de session. Lancez ensuite DeepAMC Desktop depuis le menu Démarrer.</li>
+      <li><strong>Installer sous Linux.</strong> Installez le paquet avec <code>sudo apt install ./deepamc-desktop_0.2.0_all.deb</code> depuis son dossier. Utilisez AMC 1.7 pour l’export vers Mobile.</li>
+      <li><strong>Ouvrir l’éditeur.</strong> Connectez-vous dans <strong>Compte et licence</strong> avec un compte dont la licence autorise l’export AMC sur cet ordinateur, puis cliquez sur <strong>Préparer un sujet QCM</strong>.</li>
+      <li><strong>Adapter le modèle.</strong> Remplacez les exemples préremplis par le titre et les consignes de votre épreuve. Dans <strong>En-tête, logo et paramètres AMC</strong>, renseignez l’établissement, la filière, la matière, l’année, la session et le logo. Configurez la grille INE et la feuille de réponses. Les boutons <strong>Aide</strong> expliquent les barèmes simples et multiples.</li>
+      <li><strong>Créer les questions.</strong> Définissez les choix corrects et ajoutez au besoin une formule, du code ou une image. Une miniature permet de vérifier, remplacer ou retirer une image PNG, JPEG ou PDF. Pour un PDF, elle montre la première page.</li>
+      <li><strong>Enregistrer et compiler.</strong> Cliquez sur <strong>Ouvrir dans AMC</strong> pour enregistrer le projet et le lancer dans AMC. Pour reprendre le sujet dans DeepAMC, utilisez <strong>Ouvrir un sujet DeepAMC</strong> et choisissez <code>deepamc-subject.json</code> dans le dossier du projet. Le bouton général <strong>Lancer AMC</strong> est accessible sans licence.</li>
+      <li><strong>Vérifier et continuer.</strong> Reprenez à l’étape <a href="#compiler">Compiler et contrôler</a> pour vérifier le PDF, imprimer et préparer l’export vers DeepAMC Mobile.</li>
+    </ol>
+    <a class="button secondary" href="/telechargements/#desktop-020">Télécharger Desktop 0.2.0</a>
   </section>
 
   <section class="workflow-overview" aria-labelledby="workflow-title">
@@ -47,7 +61,7 @@
     <div>
       <h2 id="prerequisite-title">Avant de commencer</h2>
       <ul>
-        <li>Installez <strong>Auto Multiple Choice</strong>, <strong>DeepAMC Desktop</strong> et <strong>DeepAMC Mobile</strong>.</li>
+        <li>Installez <strong>DeepAMC Desktop</strong>, <strong>Auto Multiple Choice</strong> et <strong>DeepAMC Mobile</strong>. Sous Windows, l’installateur de Desktop 0.2.0 configure aussi AMC.</li>
         <li>Connectez Mobile et Desktop au même compte DeepAMC et vérifiez que la licence autorise les opérations voulues.</li>
         <li>Conservez le dossier original du projet AMC : il sera nécessaire lors du réimport des résultats.</li>
         <li>Préparez, si possible, un fichier CSV des étudiants comportant l’identifiant <strong>INE AMC</strong>.</li>
@@ -58,12 +72,14 @@
   <section class="guide-layout">
     <aside class="guide-index" aria-label="Sommaire du guide">
       <strong>Dans ce guide</strong>
+      <a href="#desktop-020">Nouveau · DeepAMC Desktop 0.2.0</a>
       <a href="#composer">1. Composer dans AMC</a><a href="#compiler">2. Compiler et contrôler</a><a href="#exporter">3. Exporter le sujet</a><a href="#importer-sujet">4. Importer sur Mobile</a><a href="#session">5. Préparer la session</a><a href="#copies">6. Scanner ou importer</a><a href="#resultat">7. Contrôler le résultat</a><a href="#anomalies">8. Finaliser la correction</a><a href="#exports">9. Exporter et sauvegarder</a><a href="#retour-amc">10. Réintégrer dans AMC <em>Optionnel</em></a>
     </aside>
 
     <div class="guide-content">
       <article id="composer"><span>01</span><div>
         <p class="tool-label">DANS AUTO MULTIPLE CHOICE</p><h2>Créer et paramétrer le sujet</h2>
+        <p>Avec Desktop 0.2.0, vous pouvez aussi <a href="#desktop-020">préparer un sujet dans l’éditeur DeepAMC</a> avant de l’ouvrir dans AMC.</p>
         <ol><li>Créez un projet AMC ou ouvrez un projet existant.</li><li>Rédigez les questions et déclarez précisément les bonnes réponses.</li><li>Configurez le barème de chaque question : réponse simple ou multiple, points partiels et pénalités éventuelles.</li><li>Prévoyez la zone d’identification utilisée par votre établissement, notamment la grille <strong>INE AMC</strong> si l’association automatique des étudiants est souhaitée.</li><li>Vérifiez que chaque question possède des cases lisibles et que les numéros de questions correspondent au sujet attendu.</li></ol>
         <p class="guide-note"><strong>Important :</strong> DeepAMC applique les bonnes réponses, l’ordre des choix et les barèmes enregistrés dans ce projet AMC. Toute erreur présente ici sera reproduite lors de la correction.</p>
       </div></article>
