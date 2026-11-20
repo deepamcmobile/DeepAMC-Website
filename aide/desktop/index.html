@@ -38,7 +38,7 @@
 <p>Pour mettre à jour une installation Windows portant déjà le numéro 0.2.0, fermez DeepAMC Desktop avant de lancer le nouvel installateur.</p>
 <h2 id="preparer-un-sujet-qcm">Préparer un sujet QCM</h2>
 <ol>
-<li>Dans <strong>Compte et licence</strong>, connectez-vous et vérifiez que l’ordinateur dispose du droit d’export AMC. Ce droit donne aussi accès à l’éditeur.</li>
+<li>Dans <strong>Compte et licence</strong>, connectez-vous sur l’ordinateur associé à votre compte. L’éditeur de QCM est inclus dans les <a href="/tarifs/#comparison-title">offres DeepAMC</a>.</li>
 <li>Ouvrez <strong>Préparer un sujet QCM</strong>. Adaptez les exemples du modèle à votre épreuve. Indiquez le nombre de chiffres de l’INE demandé sur la copie, ou saisissez <code>0</code> pour retirer la grille.</li>
 <li>Dans <strong>En-tête, logo et paramètres AMC</strong>, renseignez l’établissement, la filière, la matière, l’année et les autres informations de l’épreuve. Ajoutez au besoin le logo de l’établissement au format PNG, JPEG ou PDF. Pour une feuille de réponses séparée, choisissez si l’en-tête doit y être répété.</li>
 <li>Dans <strong>Barèmes et feuille de réponses</strong>, cliquez sur <strong>Aide</strong> près de chaque barème par défaut. Utilisez un point dans les décimales, par exemple <code>0.25</code>. La note maximale de l’en-tête est imprimée sur le sujet. Le calcul des notes dépend des barèmes.</li>
@@ -72,7 +72,7 @@
 </ul>
 <h2 id="compte-et-licence">Compte et licence</h2>
 <p>Le menu de navigation comprend un espace <strong>Compte et licence</strong>, commun à Mobile et Desktop. Le backend de production <code>https://api.deepamc.app</code> est configuré par défaut. Desktop ne contacte jamais le prestataire de paiement directement et ne contient aucune clé de paiement.</p>
-<p>La consultation et le diagnostic des projets existants restent accessibles hors connexion. L’éditeur QCM et la génération d’un nouveau <code>.deepamc</code> exigent le droit d’export AMC. La réimportation d’un <code>.deepamc-results</code> exige le droit d’import AMC. Desktop vérifie ces droits via un jeton de licence signé pour l’ordinateur et utilisable hors ligne jusqu’à sa date d’expiration. Dans l’éditeur, la licence est vérifiée à l’ouverture et à l’enregistrement. En cas de refus pendant l’édition, la saisie reste à l’écran.</p>
+<p>La consultation et le diagnostic des projets existants restent accessibles hors connexion. Une licence active sur cet ordinateur permet d’utiliser l’éditeur, d’exporter un projet AMC vers Mobile et de réimporter les résultats dans AMC. Desktop vérifie ces droits via un jeton de licence signé pour l’ordinateur et utilisable hors ligne jusqu’à sa date d’expiration. Dans l’éditeur, la licence est vérifiée à l’ouverture et à l’enregistrement. En cas de refus pendant l’édition, la saisie reste à l’écran.</p>
 <p>Lorsque l’interface est ouverte, Desktop surveille silencieusement la route réseau locale, sans interroger continuellement le backend. La licence est actualisée au démarrage si Internet est disponible et à chaque retour de connexion. Une indisponibilité transitoire conserve le dernier droit hors ligne valide : trois tentatives rapprochées sont effectuées, puis les nouvelles tentatives passent à un intervalle de cinq minutes.</p>
   </article>
 </main>
