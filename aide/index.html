@@ -14,7 +14,7 @@
 <header class="site-header">
   <a class="brand" href="/"><img src="/assets/deepamc-mark.svg" alt="" width="44" height="44"><span><strong>DeepAMC</strong><small>AMC sur Mobile</small></span></a>
   <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-navigation">Menu</button>
-  <nav id="main-navigation"><a href="/">Présentation</a><a href="/tarifs/">Tarifs</a><a class="active" href="/aide/">Aide</a><a href="/support/">Support</a><a class="nav-download" href="/telechargements/">Télécharger</a></nav>
+  <nav id="main-navigation"><a href="/">Présentation</a><a href="/tarifs/">Tarifs</a><a class="active" href="/aide/">Aide</a><a href="/support/">Support</a><a href="/archives/">Archives</a><a class="nav-download" href="/telechargements/">Télécharger</a></nav>
 </header>
 
 <main id="contenu" class="page-main">
@@ -22,6 +22,7 @@
     <p class="eyebrow">PRISE EN MAIN COMPLÈTE</p>
     <h1>Du sujet AMC aux copies annotées</h1>
     <p>Préparez le sujet dans l’éditeur DeepAMC Desktop 0.2.0 ou directement dans Auto Multiple Choice (AMC). Compilez-le dans AMC, puis utilisez DeepAMC Mobile pour corriger les copies.</p>
+    <a class="button secondary" href="/aide/desktop/">Guide utilisateur de DeepAMC Desktop 0.2.0</a>
   </section>
 
   <section class="notice-card" aria-labelledby="manual-title">
@@ -35,7 +36,7 @@
   <section class="install-panel" id="desktop-020" aria-labelledby="desktop-020-title">
     <div><span class="step-number" aria-hidden="true">i</span><h2 id="desktop-020-title">Premiers pas avec DeepAMC Desktop 0.2.0</h2></div>
     <ol>
-      <li><strong>Installer sous Windows.</strong> Téléchargez le fichier .exe pour Windows 11 ou Windows 10 64 bits à partir du build 19044. Activez la virtualisation et gardez Internet disponible. L’installateur configure WSL et Ubuntu 22.04, puis installe AMC 1.7 et Desktop. Si Windows demande un redémarrage, la configuration reprend à la prochaine ouverture de session. Lancez ensuite DeepAMC Desktop depuis le menu Démarrer.</li>
+      <li><strong>Installer sous Windows.</strong> Téléchargez le fichier .exe pour Windows 11 ou Windows 10 64 bits à partir du build 19044. Activez la virtualisation et gardez Internet disponible. L’installateur installe Desktop sous Windows, puis configure WSL, Ubuntu 22.04 et AMC 1.7. Si Windows demande un redémarrage, la configuration reprend à la prochaine ouverture de session. Lancez ensuite DeepAMC Desktop depuis le menu Démarrer.</li>
       <li><strong>Installer sous Linux.</strong> Installez le paquet avec <code>sudo apt install ./deepamc-desktop_0.2.0_all.deb</code> depuis son dossier. Utilisez AMC 1.7 pour l’export vers Mobile.</li>
       <li><strong>Ouvrir l’éditeur.</strong> Connectez-vous dans <strong>Compte et licence</strong> avec un compte dont la licence autorise l’export AMC sur cet ordinateur, puis cliquez sur <strong>Préparer un sujet QCM</strong>.</li>
       <li><strong>Adapter le modèle.</strong> Remplacez les exemples préremplis par le titre et les consignes de votre épreuve. Dans <strong>En-tête, logo et paramètres AMC</strong>, renseignez l’établissement, la filière, la matière, l’année, la session et le logo. Configurez la grille INE et la feuille de réponses. Les boutons <strong>Aide</strong> expliquent les barèmes simples et multiples.</li>
@@ -133,7 +134,8 @@
       <article id="retour-amc"><span>10</span><div>
         <p class="tool-label">ÉTAPE OPTIONNELLE · RETOUR DANS DEEPAMC DESKTOP ET AMC</p><h2>Réintégrer les résultats dans le projet AMC <span class="optional-badge">Optionnel</span></h2>
         <p class="optional-intro">Les exports CSV, ZIP et PDF de l’étape 9 permettent déjà d’achever la correction dans DeepAMC. Effectuez cette étape seulement si vous voulez retrouver les résultats et produire les annotations depuis Auto Multiple Choice.</p>
-        <ol><li>Transférez le fichier <code>.deepamc-results</code> du téléphone vers l’ordinateur.</li><li>Dans DeepAMC Desktop, choisissez le parcours d’import des résultats.</li><li>Sélectionnez le <strong>projet AMC d’origine</strong> et le paquet <code>.deepamc-results</code>.</li><li>Vérifiez le résumé de compatibilité, les identifiants du sujet, les copies et les notes, puis confirmez l’import.</li><li>DeepAMC Desktop crée une sauvegarde horodatée dans <code>deepamc-backups/</code> avant toute écriture transactionnelle.</li><li>Rouvrez AMC, actualisez la saisie et la notation si nécessaire, puis contrôlez la moyenne et plusieurs notes individuelles.</li><li>Lancez <strong>Annoter les copies</strong> dans AMC. Les réponses doivent apparaître sur les scans originaux importés, avec les identités et les notes.</li></ol>
+        <ol><li>Fermez le projet dans AMC, puis transférez le fichier <code>.deepamc-results</code> sur l’ordinateur.</li><li>Dans DeepAMC Desktop, ouvrez <strong>Importer les résultats</strong> et sélectionnez le projet AMC d’origine et le paquet Mobile.</li><li>Cliquez sur <strong>Vérifier la compatibilité</strong>, contrôlez le résumé, puis cliquez sur <strong>Importer et créer une sauvegarde</strong>.</li><li>Si une liste d’étudiants est incluse, DeepAMC la configure dans AMC avec la colonne d’identifiant utilisée par les associations.</li><li>Rouvrez le projet et passez directement à <strong>Rapport</strong> (<em>Reports</em>), puis cliquez sur <strong>Annoter les copies</strong> (<em>Annotate papers</em>).</li></ol>
+        <p><a href="/aide/desktop/#si-le-nom-ou-le-prenom-manque">Que faire si un nom manque dans AMC ?</a></p>
         <div class="completion-check"><strong>Workflow terminé si</strong><span>les notes de DeepAMC et d’AMC concordent, les copies sont associées aux bons étudiants et les PDF annotés sont exploitables.</span></div>
       </div></article>
     </div>

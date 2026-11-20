@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://deepamc.app/aide/desktop/">
+  <meta name="description" content="Guide utilisateur de DeepAMC Desktop 0.2.0, de l’installation à l’annotation des copies dans AMC.">
+  <title>Guide utilisateur de DeepAMC Desktop 0.2.0</title>
+  <link rel="icon" href="/assets/deepamc-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <a class="brand" href="/"><img src="/assets/deepamc-mark.svg" alt="" width="44" height="44"><span><strong>DeepAMC</strong><small>AMC sur Mobile</small></span></a>
+  <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-navigation">Menu</button>
+  <nav id="main-navigation"><a href="/">Présentation</a><a href="/tarifs/">Tarifs</a><a class="active" href="/aide/">Aide</a><a href="/support/">Support</a><a href="/archives/">Archives</a><a class="nav-download" href="/telechargements/">Télécharger</a></nav>
+</header>
+
+
+<main id="contenu" class="page-main">
+  <section class="page-heading">
+    <p class="eyebrow">GUIDE UTILISATEUR</p>
+    <h1>DeepAMC Desktop 0.2.0</h1>
+    <p>Installez Desktop, préparez votre QCM et retrouvez dans AMC les résultats et les noms associés aux copies.</p>
+    <a class="button primary" href="/telechargements/#desktop-020">Télécharger DeepAMC Desktop</a>
+    <a class="button secondary" href="/aide/">Voir le parcours Mobile et Desktop</a>
+  </section>
+  <article class="legal-content">
+<h2 id="installer-deepamc-desktop-sous-windows">Installer DeepAMC Desktop sous Windows</h2>
+<p>Utilisez l’installateur natif <code>DeepAMC-Desktop-0.2.0-Windows-Native-Setup.exe</code> sur Windows 10 ou 11, en 64 bits. L’activation de la virtualisation et une connexion Internet sont nécessaires pour installer les composants Ubuntu. Sur Windows 10, l’ouverture des fenêtres AMC dépend aussi de la disponibilité de l’affichage graphique WSLg.</p>
+<ol>
+<li>Lancez l’installateur. Si Windows demande une autorisation administrateur pour activer WSL, validez-la.</li>
+<li>Si l’installateur demande un redémarrage, redémarrez Windows puis reconnectez-vous au même compte. La configuration reprend à l’ouverture de session.</li>
+<li>Ouvrez <strong>DeepAMC Desktop</strong> depuis le menu Démarrer. DeepAMC s’exécute sous Windows et <strong>Auto Multiple Choice (AMC) 1.7</strong> s’exécute dans <strong>Ubuntu 22.04</strong> via WSL.</li>
+<li>Si la configuration est interrompue, lancez <strong>Configurer AMC</strong> depuis le menu Démarrer. Le journal se trouve dans <code>%LOCALAPPDATA%\DeepAMC\configuration-amc.log</code>.</li>
+</ol>
+<p>Pour mettre à jour une installation Windows portant déjà le numéro 0.2.0, fermez DeepAMC Desktop avant de lancer le nouvel installateur.</p>
+<h2 id="preparer-un-sujet-qcm">Préparer un sujet QCM</h2>
+<ol>
+<li>Dans <strong>Compte et licence</strong>, connectez-vous et vérifiez que l’ordinateur dispose du droit d’export AMC. Ce droit donne aussi accès à l’éditeur.</li>
+<li>Ouvrez <strong>Préparer un sujet QCM</strong>. Adaptez les exemples du modèle à votre épreuve. Indiquez le nombre de chiffres de l’INE demandé sur la copie, ou saisissez <code>0</code> pour retirer la grille.</li>
+<li>Dans <strong>En-tête, logo et paramètres AMC</strong>, renseignez l’établissement, la filière, la matière, l’année et les autres informations de l’épreuve. Ajoutez au besoin le logo de l’établissement au format PNG, JPEG ou PDF. Pour une feuille de réponses séparée, choisissez si l’en-tête doit y être répété.</li>
+<li>Dans <strong>Barèmes et feuille de réponses</strong>, cliquez sur <strong>Aide</strong> près de chaque barème par défaut. Utilisez un point dans les décimales, par exemple <code>0.25</code>. La note maximale de l’en-tête est imprimée sur le sujet. Le calcul des notes dépend des barèmes.</li>
+<li>Cliquez sur <strong>Nouvelle question</strong>. Ajoutez au moins deux choix et marquez les bonnes réponses. Pour une question simple, marquez une seule bonne réponse. Les commandes <strong>Image</strong>, <strong>Formule LaTeX</strong> et <strong>Code / algorithme</strong> insèrent du contenu dans l’énoncé. Les images ajoutées peuvent être prévisualisées, remplacées ou retirées.</li>
+<li>Dans la liste, sélectionnez une question pour la consulter en <strong>lecture seule</strong>. Cliquez sur <strong>Modifier la question</strong> pour éditer ses champs, puis sur <strong>Valider la question</strong> pour appliquer les changements.</li>
+<li>Cliquez sur <strong>Enregistrer</strong> ou utilisez <code>Ctrl+S</code>. Au premier enregistrement, choisissez le dossier parent. Sous Windows, sélectionnez <strong>Dossiers Windows</strong> ou la distribution Ubuntu proposée, puis cliquez sur <strong>Parcourir…</strong>. Pour faire une copie du sujet avec son logo et ses images, utilisez <strong>Enregistrer sous…</strong> et donnez un nom au nouveau dossier.</li>
+<li>Pour reprendre le travail plus tard, cliquez sur <strong>Ouvrir un sujet DeepAMC</strong> et choisissez le fichier <code>deepamc-subject.json</code>. Pour compiler le sujet, cliquez sur <strong>Ouvrir dans AMC</strong>. Dans <strong>Préparation</strong> (<em>Preparation</em>), mettez à jour les documents et faites la détection des mises en page. Contrôlez le PDF et la feuille de réponses avant l’impression.</li>
+</ol>
+<p>L’éditeur génère la source <code>sujet.txt</code> au format <strong>AMC-TXT</strong>. Vous pouvez aussi créer un sujet <strong>LaTeX</strong> directement dans AMC et utiliser le même parcours d’export une fois le projet compilé. Le bouton <strong>Lancer AMC</strong> est accessible depuis l’accueil.</p>
+<h2 id="exporter-un-projet-amc-vers-deepamc-mobile">Exporter un projet AMC vers DeepAMC Mobile</h2>
+<ol>
+<li>Dans Desktop, ouvrez <strong>Exporter vers Mobile</strong> et cliquez sur <strong>Parcourir…</strong>. Sous Windows, ce bouton propose les dossiers Windows et les distributions Ubuntu détectées. Sélectionnez le dossier du projet AMC compilé.</li>
+<li>Cliquez sur <strong>Analyser le projet</strong>. Dans <strong>Compatibilité</strong>, vérifiez la version AMC, les exemplaires, les pages et les questions notées. La grille INE apparaît séparément dans le diagnostic.</li>
+<li>Cliquez sur <strong>Préparer l’export</strong>, choisissez la destination, puis cliquez sur <strong>Générer le fichier .deepamc</strong>.</li>
+<li>Transférez ce fichier vers le téléphone et importez-le dans DeepAMC Mobile. Scannez ou importez les copies, vérifiez celles qui nécessitent une intervention et associez les copies à la liste des étudiants si vous souhaitez des rapports nominatifs.</li>
+<li>Depuis Mobile, exportez les résultats au format <strong>Projet AMC</strong> pour obtenir le fichier <code>.deepamc-results</code>.</li>
+</ol>
+<h2 id="reimporter-les-resultats-mobiles-et-annoter-les-copies">Réimporter les résultats mobiles et annoter les copies</h2>
+<ol>
+<li>Fermez le projet dans AMC, puis ouvrez <strong>Importer les résultats</strong> dans DeepAMC Desktop.</li>
+<li>Sélectionnez le dossier du même projet AMC que celui utilisé pour préparer le paquet Mobile, puis le fichier <code>.deepamc-results</code>.</li>
+<li>Cliquez sur <strong>Vérifier la compatibilité</strong> et contrôlez le résumé, notamment les copies qui seront remplacées lors d’une réimportation. Cliquez ensuite sur <strong>Importer et créer une sauvegarde</strong>.</li>
+<li>Lorsque le paquet contient une liste étudiante exploitable, DeepAMC la place dans le dossier du projet et configure AMC pour utiliser le même identifiant que les associations de copies. Le dossier <code>deepamc-backups/</code> contient la sauvegarde de l’import, notamment le fichier de configuration précédent si DeepAMC l’a modifié.</li>
+<li>Rouvrez le projet dans AMC. Passez directement à <strong>Rapport</strong> (<em>Reports</em>), puis cliquez sur <strong>Annoter les copies</strong> (<em>Annotate papers</em>). Utilisez <strong>Voir</strong> (<em>Look</em>) pour ouvrir le dossier des résultats, ou ouvrez <code>cr/corrections/pdf/</code> depuis le dossier du projet.</li>
+</ol>
+<h3 id="si-le-nom-ou-le-prenom-manque">Si le nom ou le prénom manque</h3>
+<ul>
+<li>Dans <strong>Notation → Identification des étudiants</strong> (<em>Marking → Students identification</em>), vérifiez que la liste du projet est <code>deepamc-students.csv</code> et que l’identifiant unique correspond à la colonne de cette liste. Selon le projet, cette colonne peut s’appeler <strong>INE AMC</strong> ou <strong>student_code</strong>.</li>
+<li>Si seules certaines copies restent sans nom, vérifiez que leur identifiant figure dans la liste et qu’il correspond exactement à celui de la copie, y compris les zéros en tête. Après correction, relancez <strong>Annoter les copies</strong> pour produire un nouveau PDF.</li>
+<li>Si <strong>Look</strong> signale une erreur avec Nautilus sous WSL, ouvrez directement le dossier <code>cr/corrections/pdf/</code> depuis l’Explorateur Windows. L’erreur d’ouverture du dossier peut survenir après la génération du PDF.</li>
+</ul>
+<h2 id="compte-et-licence">Compte et licence</h2>
+<p>Le menu de navigation comprend un espace <strong>Compte et licence</strong>, commun à Mobile et Desktop. Le backend de production <code>https://api.deepamc.app</code> est configuré par défaut. Desktop ne contacte jamais le prestataire de paiement directement et ne contient aucune clé de paiement.</p>
+<p>La consultation et le diagnostic des projets existants restent accessibles hors connexion. L’éditeur QCM et la génération d’un nouveau <code>.deepamc</code> exigent le droit d’export AMC. La réimportation d’un <code>.deepamc-results</code> exige le droit d’import AMC. Desktop vérifie ces droits via un jeton de licence signé pour l’ordinateur et utilisable hors ligne jusqu’à sa date d’expiration. Dans l’éditeur, la licence est vérifiée à l’ouverture et à l’enregistrement. En cas de refus pendant l’édition, la saisie reste à l’écran.</p>
+<p>Lorsque l’interface est ouverte, Desktop surveille silencieusement la route réseau locale, sans interroger continuellement le backend. La licence est actualisée au démarrage si Internet est disponible et à chaque retour de connexion. Une indisponibilité transitoire conserve le dernier droit hors ligne valide : trois tentatives rapprochées sont effectuées, puis les nouvelles tentatives passent à un intervalle de cinq minutes.</p>
+  </article>
+</main>
+<footer><a class="brand footer-brand" href="/"><img src="/assets/deepamc-mark.svg" alt="" width="38" height="38"><span><strong>DeepAMC</strong><small>AMC sur Mobile</small></span></a><p>Documentation de prise en main.</p><a class="softneur-signature" href="https://softneur.com/" target="_blank" rel="noopener"><img src="/assets/softneur-logo.svg" alt="SoftNeur" width="112"><span><strong>Un produit SoftNeur</strong><small>Designed by SoftNeur</small></span></a><div class="footer-links"><a href="/mentions-legales/">Mentions légales</a><a href="/support/">Besoin d’aide ?</a><a href="/telechargements/">Téléchargements</a></div></footer>
+<script src="/assets/site.js"></script>
+</body>
+</html>
